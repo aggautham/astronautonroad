@@ -1,0 +1,813 @@
+/* ==========================================================================
+   1. RESET
+   ========================================================================== */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#090909;
+    color:#F5F5F5;
+    font-family:'Inter',sans-serif;
+    overflow-x:hidden;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+}
+
+img{
+    display:block;
+    width:100%;
+    max-width:100%;
+}
+
+video{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+button{
+    background:none;
+    border:none;
+    cursor:pointer;
+    font:inherit;
+}
+
+input,
+textarea,
+select{
+    font:inherit;
+}
+
+/* ==========================================================================
+   2. ROOT VARIABLES
+   ========================================================================== */
+
+:root{
+
+    --clr-bg:#090909;
+    --clr-surface:#181818;
+    --clr-surface-2:#202020;
+
+    --clr-white:#ffffff;
+    --clr-text:#F5F5F5;
+    --clr-muted:#A4A4A4;
+
+    --clr-accent:#C89B3C;
+
+    --border:rgba(255,255,255,.08);
+
+    --shadow-lg:
+        0 20px 60px rgba(0,0,0,.45);
+
+    --radius:16px;
+
+    --container:1400px;
+
+    --nav-height:90px;
+
+    --transition:.35s ease;
+
+}
+
+/* ==========================================================================
+   3. GLOBAL
+   ========================================================================== */
+
+body::selection{
+    background:var(--clr-accent);
+    color:#000;
+}
+
+.container{
+
+    width:min(92%,var(--container));
+
+    margin-inline:auto;
+
+}
+
+.section{
+
+    padding:8rem 0;
+
+}
+
+main{
+
+    overflow:hidden;
+
+}
+
+/* ==========================================================================
+   4. TYPOGRAPHY
+   ========================================================================== */
+
+h1,
+h2,
+h3,
+h4{
+
+    font-family:'Poppins',sans-serif;
+
+    font-weight:600;
+
+    line-height:1.15;
+
+}
+
+h1{
+
+    font-size:clamp(3.8rem,8vw,6.5rem);
+
+}
+
+h2{
+
+    font-size:clamp(2.5rem,5vw,4rem);
+
+}
+
+h3{
+
+    font-size:1.6rem;
+
+}
+
+p{
+
+    color:var(--clr-muted);
+
+    max-width:650px;
+
+}
+
+.section-heading{
+
+    margin-bottom:5rem;
+
+}
+
+.section-heading__subtitle{
+
+    display:inline-block;
+
+    color:var(--clr-accent);
+
+    font-size:.8rem;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    margin-bottom:1rem;
+
+}
+
+.section-heading__title{
+
+    margin-bottom:1rem;
+
+}
+
+.section-heading__description{
+
+    max-width:720px;
+
+}
+
+/* ==========================================================================
+   5. BUTTONS
+   ========================================================================== */
+
+.hero__button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:.75rem;
+
+    margin-top:2rem;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.hero__button::after{
+
+    content:"";
+
+    width:30px;
+
+    height:1px;
+
+    background:var(--clr-accent);
+
+    transition:var(--transition);
+
+}
+
+.hero__button:hover{
+
+    color:var(--clr-accent);
+
+}
+
+.hero__button:hover::after{
+
+    width:55px;
+
+}
+
+/* ==========================================================================
+   6. SHARED CARDS
+   ========================================================================== */
+
+.work-card,
+.travel-card,
+.brand-card{
+
+    background:var(--clr-surface);
+
+    border:1px solid var(--border);
+
+    border-radius:var(--radius);
+
+    overflow:hidden;
+
+    transition:var(--transition);
+
+}
+
+.work-card:hover,
+.travel-card:hover,
+.brand-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-lg);
+
+}
+
+/* ==========================================================================
+   7. NAVIGATION
+   ========================================================================== */
+
+#header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    transition:.45s ease;
+
+}
+
+#header.scrolled{
+
+    background:rgba(18,18,18,.65);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-bottom:1px solid rgba(255,255,255,.06);
+
+    box-shadow:0 10px 40px rgba(0,0,0,.35);
+
+}
+
+.navbar{
+
+    height:var(--nav-height);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+}
+
+.navbar__logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:.8rem;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:1.15rem;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    transition:var(--transition);
+
+}
+
+.navbar__logo img{
+
+    width: 150px;
+
+    height:auto;
+
+}
+
+.navbar__logo:hover{
+
+    opacity:.8;
+
+}
+
+.navbar__menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:3rem;
+
+}
+
+.navbar__item{
+
+    position:relative;
+
+}
+
+.navbar__link{
+
+    position:relative;
+
+    color:var(--clr-text);
+
+    font-size:.95rem;
+
+    font-weight:500;
+
+    transition:var(--transition);
+
+}
+
+.navbar__link::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:-10px;
+
+    transform:translateX(-50%);
+
+    width:0;
+
+    height:1px;
+
+    background:var(--clr-accent);
+
+    transition:.35s ease;
+
+}
+
+.navbar__link:hover{
+
+    color:var(--clr-accent);
+
+}
+
+.navbar__link:hover::after{
+
+    width:100%;
+
+}
+
+.navbar__link.active{
+
+    color:var(--clr-accent);
+
+}
+
+.navbar__link.active::after{
+
+    width:100%;
+
+}
+
+/* ==========================================================================
+   8. HAMBURGER
+   ========================================================================== */
+
+.navbar__toggle{
+
+    display:none;
+
+    width:44px;
+
+    height:44px;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-direction:column;
+
+    gap:6px;
+
+}
+
+.navbar__toggle span{
+
+    width:24px;
+
+    height:2px;
+
+    background:#ffffff;
+
+    transition:.35s ease;
+
+}
+
+.navbar__toggle.active span:nth-child(1){
+
+    transform:translateY(8px) rotate(45deg);
+
+}
+
+.navbar__toggle.active span:nth-child(2){
+
+    opacity:0;
+
+}
+
+.navbar__toggle.active span:nth-child(3){
+
+    transform:translateY(-8px) rotate(-45deg);
+
+}
+
+/* ==========================================================================
+   9. MOBILE MENU
+   ========================================================================== */
+
+.mobile-menu{
+
+    position:fixed;
+
+    inset:0;
+
+    background:#090909;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
+    transition:.45s ease;
+
+    z-index:999;
+
+}
+
+.mobile-menu.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+    pointer-events:auto;
+
+}
+
+.mobile-menu__content{
+
+    text-align:center;
+
+}
+
+.mobile-menu__content ul{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:2rem;
+
+}
+
+.mobile-menu__content a{
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:clamp(2rem,4vw,3rem);
+
+    font-weight:500;
+
+    color:var(--clr-text);
+
+    transition:var(--transition);
+
+}
+
+.mobile-menu__content a:hover{
+
+    color:var(--clr-accent);
+
+}
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.hero{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    width:100%;
+
+    height:100svh;
+
+    overflow:hidden;
+
+    transition:grid-template-columns .65s cubic-bezier(.22,.61,.36,1);
+
+}
+
+/* Left Hover */
+
+.hero:hover{
+
+    grid-template-columns:1fr 1fr;
+
+}
+
+.hero:has(.hero__travel:hover){
+
+    grid-template-columns:3fr 1fr;
+
+}
+
+/* Right Hover */
+
+.hero:has(.hero__works:hover){
+
+    grid-template-columns:1fr 3fr;
+
+}
+
+/* ==========================================================
+   PANELS
+========================================================== */
+
+.hero__panel{
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    cursor:pointer;
+
+}
+
+.hero__travel{
+
+    border-right:1px solid rgba(255,255,255,.06);
+
+}
+
+.hero__works{
+
+    border-left:1px solid rgba(255,255,255,.06);
+
+}
+
+/* ==========================================================
+   IMAGES
+========================================================== */
+
+.hero__image{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:
+
+        transform 1s ease,
+
+        filter .5s ease;
+
+}
+
+.hero__panel:hover .hero__image{
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================================================
+   OVERLAY
+========================================================== */
+
+.hero__overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(
+
+        to top,
+
+        rgba(0,0,0,.82),
+
+        rgba(0,0,0,.35),
+
+        rgba(0,0,0,.12)
+
+    );
+
+    z-index:2;
+
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.hero__content{
+
+    position:relative;
+
+    z-index:5;
+
+    padding:5rem;
+
+    max-width:520px;
+
+    transition:
+
+        transform .45s ease,
+
+        opacity .45s ease;
+
+}
+
+.hero__subtitle{
+
+    display:inline-block;
+
+    color:#C89B3C;
+
+    letter-spacing:4px;
+
+    font-size:.8rem;
+
+    text-transform:uppercase;
+
+    margin-bottom:1rem;
+
+}
+
+.hero__content h1{
+
+    margin-bottom:1.5rem;
+
+    font-size:clamp(3.5rem,5vw,6rem);
+
+    line-height:1;
+
+    color:#fff;
+
+}
+
+.hero__content p{
+
+    margin-bottom:2rem;
+
+    color:rgba(255,255,255,.78);
+
+}
+
+.hero__button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:.75rem;
+
+    color:#fff;
+
+    transition:.35s;
+
+}
+
+.hero__button:hover{
+
+    color:#C89B3C;
+
+}
+
+/* ==========================================================
+   HOVER EFFECT
+========================================================== */
+
+.hero__panel:hover .hero__content{
+
+    transform:translateY(-10px);
+
+}
+
+.hero__panel:not(:hover) .hero__image{
+
+    filter:brightness(.82);
+
+}
+
+.hero:hover .hero__panel:hover .hero__image{
+
+    filter:brightness(1);
+
+}
+
+
+
+
+/* ==========================================================================
+   19. SELECTION
+   ========================================================================== */
+
+::selection{
+
+    background:var(--clr-accent);
+
+    color:#000;
+
+}
+
+::-moz-selection{
+
+    background:var(--clr-accent);
+
+    color:#000;
+
+}
+.no-scroll {
+    overflow: hidden;
+}

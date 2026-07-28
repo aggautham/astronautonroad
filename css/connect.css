@@ -1,0 +1,575 @@
+/* ==========================================================
+   CONNECT HERO
+========================================================== */
+
+.connect-hero{
+
+    padding:10rem 0 6rem;
+
+}
+
+.connect-hero .container{
+
+    max-width:900px;
+
+}
+
+.connect-hero h1{
+
+    margin:1rem 0 2rem;
+
+    font-size:clamp(3.5rem,7vw,6rem);
+
+    line-height:.95;
+
+}
+
+.connect-hero p{
+
+    max-width:650px;
+
+    font-size:1.1rem;
+
+    line-height:1.9;
+
+    color:rgba(255,255,255,.72);
+
+}
+
+/* ==========================================================
+   CONTACT LAYOUT
+========================================================== */
+
+.contact-section{
+
+    padding:4rem 0 7rem;
+
+}
+
+.contact-layout{
+
+    display:grid;
+
+    grid-template-columns:420px 1fr;
+
+    gap:6rem;
+
+    align-items:start;
+
+}
+
+.contact-details h2{
+
+    margin:1rem 0 3rem;
+
+    font-size:2.8rem;
+
+}
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.travel-hero{
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background: #090909;
+
+}
+
+.travel-hero__background{
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: url("../assets/images/works2.jpg")
+                center center / cover
+                no-repeat;
+
+}
+
+.travel-hero__overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        90deg,
+        rgba(0,0,0,.82) 0%,
+        rgba(0,0,0,.55) 45%,
+        rgba(0,0,0,.40) 100%
+    );
+
+}
+
+
+.travel-hero__content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:720px;
+
+}
+
+.travel-hero h1{
+
+    margin-bottom:2rem;
+
+    font-size:clamp(3.5rem,7vw,6rem);
+
+    line-height:.95;
+
+    color:#fff;
+
+}
+
+.travel-hero p{
+
+    max-width:560px;
+
+    margin-bottom:3rem;
+
+    font-size:1.1rem;
+
+    line-height:1.9;
+
+    color:rgba(255,255,255,.75);
+
+}
+
+@keyframes travelHeroZoom{
+
+    from{
+
+        transform:scale(1.05);
+
+    }
+
+    to{
+
+        transform:scale(1.12);
+
+    }
+
+}
+
+
+.contact-item{
+
+    margin-bottom:2rem;
+
+}
+
+.contact-item h4{
+
+    margin-bottom:.6rem;
+
+    color:var(--accent-color);
+
+    font-size:.9rem;
+
+    text-transform:uppercase;
+
+    letter-spacing:.15em;
+
+}
+
+.contact-item a,
+.contact-item p,
+.contact-item strong{
+
+    font-size:1.05rem;
+
+    color:rgba(255,255,255,.82);
+
+    text-decoration:none;
+
+}
+
+.contact-item a:hover{
+
+    color:var(--accent-color);
+
+}
+
+/* ==========================================================
+   FORM
+========================================================== */
+
+.contact-form-wrapper{
+
+    padding:3rem;
+
+    border-radius:28px;
+
+    background:#121212;
+
+    border:1px solid rgba(255,255,255,.06);
+
+}
+
+.form-group{
+
+    margin-bottom:1.5rem;
+
+}
+
+.form-group input,
+.form-group textarea{
+
+    width:100%;
+
+    padding:1rem 1.25rem;
+
+    border-radius:14px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:#0b0b0b;
+
+    color:#fff;
+
+    font-size:1rem;
+
+    transition:.3s ease;
+
+}
+
+.form-group textarea{
+
+    resize:vertical;
+
+    min-height:180px;
+
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder{
+
+    color:rgba(255,255,255,.40);
+
+}
+
+.form-group input:focus,
+.form-group textarea:focus{
+
+    outline:none;
+
+    border-color:var(--accent-color);
+
+    box-shadow:0 0 0 3px rgba(255,255,255,.04);
+
+}
+
+#submit-btn{
+
+    width:100%;
+
+    margin-top:.5rem;
+
+}
+
+.hidden-field{
+
+    display:none;
+
+}
+
+/* ==========================================================
+   AVAILABILITY
+========================================================== */
+
+.availability{
+
+    padding:7rem 0;
+
+}
+
+.availability-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:1.5rem;
+
+    margin-top:4rem;
+
+}
+
+.availability-card{
+
+    padding:2.5rem 2rem;
+
+    text-align:center;
+
+    border-radius:20px;
+
+    background:#121212;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    transition:.35s ease;
+
+}
+
+.availability-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:var(--accent-color);
+
+}
+
+/* ==========================================================
+   CTA
+========================================================== */
+
+.connect-cta{
+
+    padding:7rem 0;
+
+}
+
+.connect-cta__box{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:5rem 3rem;
+
+    border-radius:28px;
+
+    background:#121212;
+
+    border:1px solid rgba(255,255,255,.06);
+
+}
+
+.connect-cta__box h2{
+
+    margin:1rem 0;
+
+    font-size:clamp(2.5rem,4vw,4rem);
+
+}
+
+.connect-cta__box p{
+
+    max-width:620px;
+
+    margin:0 auto 2.5rem;
+
+    color:rgba(255,255,255,.72);
+
+    line-height:1.9;
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:1024px){
+
+    .contact-layout{
+
+        grid-template-columns:1fr;
+
+        gap:4rem;
+
+    }
+
+    .availability-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .connect-hero{
+
+        padding:8rem 0 4rem;
+
+    }
+
+    .connect-hero h1{
+
+        font-size:3.2rem;
+
+    }
+
+    .contact-form-wrapper{
+
+        padding:2rem;
+
+    }
+
+    .availability-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .connect-cta__box{
+
+        padding:3rem 2rem;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .connect-hero h1{
+
+        font-size:2.7rem;
+
+    }
+
+}
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:2rem;
+
+    margin-top:4rem;
+
+}
+
+.contact-card{
+
+    padding:2.5rem;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:20px;
+
+    transition:.3s;
+
+    background:#121212;
+
+}
+
+.contact-card:hover{
+
+    transform:translateY(-6px);
+
+    border-color:var(--accent-color);
+
+}
+
+.contact-card span{
+
+    display:block;
+
+    margin-bottom:1rem;
+
+    font-size:.8rem;
+
+    letter-spacing:.15em;
+
+    text-transform:uppercase;
+
+    color:var(--accent-color);
+
+}
+
+.contact-card a,
+.contact-card p{
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:1.2rem;
+
+    line-height:1.8;
+
+}
+
+.contact-card a:hover{
+
+    color:var(--accent-color);
+
+}
+.social-section{
+
+    padding:6rem 0;
+
+    text-align:center;
+
+}
+
+.social-icons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:1.5rem;
+
+    margin-top:2.5rem;
+
+}
+
+.availability{
+
+    padding:6rem 0;
+
+}
+
+.availability-list{
+
+    margin-top:3rem;
+
+}
+
+.availability-list div{
+
+    padding:2rem 0;
+
+    font-size:1.4rem;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+@media(max-width:768px){
+
+    .contact-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}

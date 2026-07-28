@@ -1,0 +1,818 @@
+/* ==========================================================
+   TRAVELOGUE PAGE
+========================================================== */
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.travel-hero{
+
+    position: relative;
+
+    width: 100%;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    background: #090909;
+
+}
+
+.travel-hero__background{
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: url("../assets/images/works1.jpg")
+                center center / cover
+                no-repeat;
+
+}
+
+.travel-hero__overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        90deg,
+        rgba(0,0,0,.82) 0%,
+        rgba(0,0,0,.55) 45%,
+        rgba(0,0,0,.40) 100%
+    );
+
+}
+
+.travel-hero__content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:720px;
+
+}
+
+.travel-hero h1{
+
+    margin-bottom:2rem;
+
+    font-size:clamp(3.5rem,7vw,6rem);
+
+    line-height:.95;
+
+    color:#fff;
+
+}
+
+.travel-hero p{
+
+    max-width:560px;
+
+    margin-bottom:3rem;
+
+    font-size:1.1rem;
+
+    line-height:1.9;
+
+    color:rgba(255,255,255,.75);
+
+}
+
+@keyframes travelHeroZoom{
+
+    from{
+
+        transform:scale(1.05);
+
+    }
+
+    to{
+
+        transform:scale(1.12);
+
+    }
+
+}
+
+
+
+/* ==========================================================
+   FEATURED EXPEDITION
+========================================================== */
+/* ==========================================================
+   FEATURED EXPEDITION
+========================================================== */
+
+.featured-expedition{
+
+    padding:5rem 0 3rem;
+
+}
+
+.featured-expedition__header{
+
+    text-align:center;
+
+    margin-bottom:4rem;
+
+}
+
+.featured-expedition__header h2{
+
+    margin-top:1rem;
+
+    font-size:clamp(2rem,4vw,3.5rem);
+
+}
+
+.featured-expedition__layout{
+
+    display:grid;
+
+    grid-template-columns:1.4fr 1fr;
+
+    gap:5rem;
+
+    align-items:center;
+
+}
+
+.featured-expedition__image{
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+}
+
+.featured-expedition__image img{
+
+    width:100%;
+
+    display:block;
+
+    transition:.8s ease;
+
+}
+
+.featured-expedition__image:hover img{
+
+    transform:scale(1.05);
+
+}
+
+.journey-location{
+
+    display:inline-block;
+
+    margin-bottom:1rem;
+
+    letter-spacing:.15em;
+
+    text-transform:uppercase;
+
+    color:var(--accent-color);
+
+}
+
+.featured-expedition__content h3{
+
+    margin-bottom:1.5rem;
+
+    font-size:clamp(2rem,3vw,3rem);
+
+}
+
+.featured-expedition__content p{
+
+    margin-bottom:2.5rem;
+
+    line-height:1.9;
+
+    color:rgba(255,255,255,.72);
+
+}
+
+.journey-meta{
+
+    display:flex;
+
+    gap:3rem;
+
+    margin-bottom:2.5rem;
+
+}
+
+.journey-meta div{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.journey-meta strong{
+
+    font-size:1.4rem;
+
+    color:#fff;
+
+}
+
+.journey-meta span{
+
+    color:rgba(255,255,255,.55);
+
+    font-size:.9rem;
+
+}
+
+
+/* ==========================================================
+   JOURNEY GRID
+========================================================== */
+/* ==========================================================
+   JOURNEY GRID
+========================================================== */
+
+.journey-grid{
+
+    padding:7rem 0;
+
+}
+
+.journey-grid__header{
+
+    text-align:center;
+
+    margin-bottom:2.5rem;
+
+}
+
+.journey-grid__header h2{
+
+    margin-top:1rem;
+
+    font-size:clamp(2rem,4vw,3.5rem);
+
+}
+
+.journey-grid__cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:2.5rem;
+
+}
+
+.journey-card{
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    background:#121212;
+
+    transition:.45s ease;
+
+}
+
+.journey-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.journey-card__image{
+
+    aspect-ratio:4/5;
+
+    overflow:hidden;
+
+}
+
+.journey-card__image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.8s ease;
+
+}
+
+.journey-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.journey-card__content{
+
+    padding:2rem;
+
+}
+
+.journey-card__location{
+
+    display:block;
+
+    margin-bottom:.8rem;
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+
+    font-size:.8rem;
+
+    color:var(--accent-color);
+
+}
+
+.journey-card h3{
+
+    margin-bottom:1rem;
+
+    font-size:1.8rem;
+
+    line-height:1.2;
+
+}
+
+.journey-card__meta{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-bottom:2rem;
+
+    color:rgba(255,255,255,.6);
+
+    font-size:.9rem;
+
+}
+
+.journey-card__link{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:.5rem;
+
+    color:#fff;
+
+    font-weight:500;
+
+    transition:.3s ease;
+
+}
+
+.journey-card:hover .journey-card__link{
+
+    color:var(--accent-color);
+
+}
+
+
+/* ==========================================================
+   RIDE STATISTICS
+========================================================== */
+
+/* ==========================================================
+   RIDE STATISTICS
+========================================================== */
+
+.travel-stats{
+
+    padding:8rem 0;
+
+    background:#0b0b0b;
+
+}
+
+.travel-stats__header{
+
+    text-align:center;
+
+    margin-bottom:5rem;
+
+}
+
+.travel-stats__header h2{
+
+    margin-top:1rem;
+
+    font-size:clamp(2.2rem,4vw,4rem);
+
+    line-height:1.1;
+
+}
+
+.travel-stats__grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:3rem;
+
+    text-align:center;
+
+}
+
+.travel-stat{
+
+    position:relative;
+
+}
+
+.travel-stat::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:10%;
+
+    right:-1.5rem;
+
+    width:1px;
+
+    height:80%;
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.travel-stat:last-child::after{
+
+    display:none;
+
+}
+
+.travel-stat h3{
+
+    margin-bottom:.75rem;
+
+    font-size:clamp(3rem,6vw,5rem);
+
+    font-weight:600;
+
+    line-height:1;
+
+    color:#fff;
+
+}
+
+.travel-stat p{
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+
+    font-size:.82rem;
+
+    color:rgba(255,255,255,.55);
+
+}
+
+/* ==========================================================
+   QUOTE
+========================================================== */
+
+/* ==========================================================
+   QUOTE
+========================================================== */
+
+.travel-quote{
+
+    position:relative;
+
+    padding:10rem 0;
+
+    overflow:hidden;
+
+}
+
+.travel-quote__background{
+
+    position:absolute;
+
+    inset:0;
+
+    background:url("../assets/images/travel/quote-bg.jpg") center/cover;
+
+    transform:scale(1.08);
+
+    filter:brightness(.45);
+
+}
+
+.travel-quote__overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.35);
+
+}
+
+.travel-quote .container{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.travel-quote blockquote{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:clamp(2.5rem,5vw,4.5rem);
+
+    font-style:italic;
+
+    line-height:1.3;
+
+    color:#fff;
+
+}
+
+/* ==========================================================
+   CTA
+========================================================== */
+
+/* ==========================================================
+   CTA
+========================================================== */
+
+.travel-cta{
+
+    padding:8rem 0;
+
+}
+
+.travel-cta__box{
+
+    max-width:850px;
+
+    margin:auto;
+
+    text-align:center;
+
+    padding:5rem 3rem;
+
+    border-radius:24px;
+
+    background:#121212;
+
+    border:1px solid rgb(255, 179, 0);
+
+}
+
+.travel-cta__box h2{
+
+    margin:1rem 0 1.5rem;
+
+    font-size:clamp(2.5rem,4vw,4rem);
+
+}
+
+.travel-cta__box p{
+
+    max-width:620px;
+
+    margin:0 auto 2.5rem;
+
+    line-height:1.9;
+
+    color:rgba(255,255,255,.72);
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:1024px){
+
+    .featured-expedition__layout{
+
+        grid-template-columns:1fr;
+
+        gap:3rem;
+
+    }
+
+    .journey-grid__cards{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .travel-stats__grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:4rem 2rem;
+
+    }
+
+    .travel-stat::after{
+
+        display:none;
+
+    }
+
+}
+.featured-expedition{
+    padding: 5rem 0 3rem;
+}
+
+.journey-grid{
+    padding: 2rem 0 6rem;
+}
+
+.journey-grid__header{
+    margin-bottom: 2.5rem;
+}
+
+@media (max-width:768px){
+
+    .travel-hero{
+
+        min-height:85vh;
+
+        padding:8rem 0 5rem;
+
+    }
+
+    .travel-hero h1{
+
+        font-size:3.4rem;
+
+    }
+
+    .travel-hero p{
+
+        font-size:1rem;
+
+    }
+
+    /* JOURNEY GRID */
+
+.journey-grid{
+
+    padding: 2rem 0 3rem;
+
+}
+
+
+/* RIDE STATISTICS */
+
+.travel-stats{
+
+    padding: 4rem 0 6rem;
+
+}
+
+    .journey-grid__cards{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .journey-meta{
+
+        flex-direction:column;
+
+        gap:1.5rem;
+
+    }
+
+
+
+    .travel-stats__grid{
+
+        grid-template-columns:1fr;
+
+        gap:3rem;
+
+    }
+
+    .travel-quote{
+
+        padding:6rem 0;
+
+    }
+
+    .travel-quote blockquote{
+
+        font-size:2.3rem;
+
+    }
+
+    .travel-cta{
+
+        padding:5rem 0;
+
+    }
+
+    .travel-cta__box{
+
+        padding:3rem 2rem;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    .travel-hero h1{
+
+        font-size:2.8rem;
+
+    }
+
+    .featured-expedition__content h3{
+
+        font-size:2rem;
+
+    }
+
+    .journey-card h3{
+
+        font-size:1.5rem;
+
+    }
+
+    .travel-stat h3{
+
+        font-size:3rem;
+
+    }
+
+    .travel-quote blockquote{
+
+        font-size:1.9rem;
+
+    }
+
+    .journey-card{
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    overflow: hidden;
+    border-radius: 18px;
+    background: #121212;
+
+}
+
+.journey-card a{
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+}
+
+}
