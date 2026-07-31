@@ -1,0 +1,591 @@
+/* ==========================================================
+   JOURNEY HERO
+========================================================== */
+
+.journey-hero{
+
+    position:relative;
+
+    height:100vh;
+
+    min-height:720px;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    overflow:hidden;
+
+}
+
+.journey-hero img{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.journey-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        rgba(0,0,0,.15),
+        rgba(0,0,0,.78)
+    );
+
+}
+
+.journey-hero .container{
+
+    position:relative;
+
+    z-index:2;
+
+    padding-bottom:6rem;
+
+}
+
+.journey-hero h1{
+
+    margin:1rem 0;
+
+    font-size:clamp(3.5rem,7vw,6rem);
+
+    line-height:.95;
+
+}
+
+.journey-hero p{
+
+    font-size:1.15rem;
+
+    color:rgba(255,255,255,.75);
+
+}
+
+/* ==========================================================
+   OVERVIEW
+========================================================== */
+
+.journey-overview{
+
+    padding:6rem 0;
+
+}
+
+.journey-overview p{
+
+    max-width:900px;
+
+    margin:auto;
+
+    text-align:center;
+
+    line-height:2;
+
+    color:rgba(255,255,255,.72);
+
+}
+
+/* ==========================================================
+   JOURNEY STATS
+========================================================== */
+
+.journey-stats{
+
+    padding:6rem 0;
+
+    background:#101010;
+
+}
+
+.stats-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(6,1fr);
+
+    gap:2rem;
+
+    text-align:center;
+
+}
+
+.stats-grid h3{
+
+    margin-bottom:.75rem;
+
+    font-size:3rem;
+
+}
+
+.stats-grid p{
+
+    color:rgba(255,255,255,.55);
+
+}
+
+/* ==========================================================
+   ROADMAP
+========================================================== */
+
+.journey-roadmap{
+
+    padding:6rem 0;
+
+}
+
+.roadmap{
+
+    max-width:700px;
+
+    margin:auto;
+
+    position:relative;
+
+}
+
+.roadmap::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:26px;
+
+    top:0;
+
+    bottom:0;
+
+    width:2px;
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.road-stop{
+
+    position:relative;
+
+    margin-bottom:4rem;
+
+    padding-left:80px;
+
+}
+
+.road-stop::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:18px;
+
+    top:8px;
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:50%;
+
+    background:#5c5c5c;
+
+}
+
+.current-location::before{
+
+    background:#ff2d2d;
+
+    box-shadow:
+        0 0 8px #ff2d2d,
+        0 0 18px rgba(255,45,45,.8),
+        0 0 35px rgba(255,45,45,.6);
+
+    animation:currentLocation 1.5s infinite;
+
+}
+
+@keyframes currentLocation{
+
+    0%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+        box-shadow:
+            0 0 8px #ff2d2d,
+            0 0 18px rgba(255,45,45,.8),
+            0 0 35px rgba(255,45,45,.6);
+
+    }
+
+    50%{
+
+        transform:scale(1.45);
+
+        opacity:.75;
+
+        box-shadow:
+            0 0 12px #ff2d2d,
+            0 0 30px rgba(255,45,45,.9),
+            0 0 50px rgba(255,45,45,.7);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+        opacity:1;
+
+        box-shadow:
+            0 0 8px #ff2d2d,
+            0 0 18px rgba(255,45,45,.8),
+            0 0 35px rgba(255,45,45,.6);
+
+    }
+
+}
+
+.road-stop h4{
+
+    margin-top:.5rem;
+
+    font-size:1.5rem;
+
+}
+
+/* ==========================================================
+   EPISODES
+========================================================== */
+
+.journey-episodes{
+
+    padding:6rem 0;
+
+}
+
+.episode-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:3rem;
+
+}
+
+.episode-card{
+
+    transition:.35s;
+
+}
+
+.episode-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.episode-video{
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    margin-bottom:1.5rem;
+
+}
+
+.episode-video iframe{
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    border:0;
+
+}
+
+.episode-card h3{
+
+    margin-bottom:.8rem;
+
+}
+
+/* ==========================================================
+   PHOTO JOURNAL
+========================================================== */
+
+.journey-gallery{
+
+    padding:6rem 0;
+
+}
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:1.5rem;
+
+}
+
+.gallery-grid img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:18px;
+
+    transition:.5s;
+
+    cursor:pointer;
+
+}
+
+.gallery-grid img:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* ==========================================================
+   GEAR
+========================================================== */
+
+.riding-gear,
+.film-gear{
+
+    padding:6rem 0;
+
+}
+
+.gear-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:2rem;
+
+}
+
+.gear-grid div{
+
+    padding:2rem;
+
+    border-radius:18px;
+
+    background:#121212;
+
+}
+
+.gear-grid span{
+
+    display:block;
+
+    margin-bottom:1rem;
+
+    font-size:.75rem;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    color:var(--accent-color);
+
+}
+
+.gear-grid h4{
+
+    line-height:1.7;
+
+}
+
+/* ==========================================================
+   NEXT JOURNEY
+========================================================== */
+
+.next-journey{
+
+    padding:7rem 0;
+
+    text-align:center;
+
+}
+
+.next-journey h2{
+
+    margin-bottom:2rem;
+
+    font-size:clamp(2.5rem,4vw,4rem);
+
+}
+
+.next-journey a{
+
+    color:#fff;
+
+    text-decoration:none;
+
+    font-size:1.1rem;
+
+    transition:.3s;
+
+}
+
+.next-journey a:hover{
+
+    color:var(--accent-color);
+
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media(max-width:1024px){
+
+    .stats-grid{
+
+        grid-template-columns:repeat(3,1fr);
+
+    }
+
+    .gear-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .journey-hero{
+
+        min-height:80vh;
+
+    }
+
+    .episode-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .gallery-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .stats-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .gear-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .stats-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .journey-hero h1{
+
+        font-size:3rem;
+
+    }
+
+}
+
+/* ==========================================================
+   LIGHTBOX
+========================================================== */
+
+.lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.94);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.3s ease;
+
+    z-index:9999;
+
+    cursor:pointer;
+
+}
+
+.lightbox.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.lightbox img{
+
+    max-width:90%;
+
+    max-height:90%;
+
+    border-radius:14px;
+
+}
+
+.lightbox-close{
+
+    position:absolute;
+
+    top:30px;
+
+    right:40px;
+
+    font-size:3rem;
+
+    color:#fff;
+
+    cursor:pointer;
+
+}
