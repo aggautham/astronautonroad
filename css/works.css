@@ -553,7 +553,7 @@
 
     width:auto;
 
-    opacity:.45;
+    opacity:1;
 
     
 
@@ -561,7 +561,7 @@
 
     flex-shrink:0;
     
-    filter: invert(0.7);
+ 
 
 }
 
