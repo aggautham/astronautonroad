@@ -811,3 +811,18 @@ p{
 .no-scroll {
     overflow: hidden;
 }
+
+
+.hero__panel{
+
+    position: relative;
+
+    display: flex;
+
+    overflow: hidden;
+
+    text-decoration: none;
+
+    color: inherit;
+
+}

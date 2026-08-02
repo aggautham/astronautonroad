@@ -332,3 +332,45 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+
+const cursor = document.querySelector(".custom-cursor");
+
+let mouseX = 0;
+let mouseY = 0;
+
+let currentX = 0;
+let currentY = 0;
+
+// Get mouse position
+window.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+});
+
+// Smooth animation
+function animateCursor() {
+    currentX += (mouseX - currentX) * 0.15;
+    currentY += (mouseY - currentY) * 0.15;
+
+    cursor.style.left = currentX + "px";
+    cursor.style.top = currentY + "px";
+
+    requestAnimationFrame(animateCursor);
+}
+
+animateCursor();
+
+document.querySelectorAll("a, button").forEach((el) => {
+    el.addEventListener("mouseenter", () => {
+        cursor.style.width = "50px";
+        cursor.style.height = "50px";
+        cursor.style.borderColor = "#f5c76c";
+    });
+
+    el.addEventListener("mouseleave", () => {
+        cursor.style.width = "22px";
+        cursor.style.height = "22px";
+        cursor.style.borderColor = "#d6b36a";
+    });
+});
